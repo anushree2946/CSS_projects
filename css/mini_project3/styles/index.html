@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
+</head>
+<style>
+    :root{
+    --mainTextColor-light:#000;
+    --secondaryTextColor-light:rgb(51,51,51);
+    --mainLinkColor-light:#0da2b8;
+    --mainBorderColor-light:rgb(218, 218, 218);
+    --mainBgColor-light:rgb(249, 250,251);
+
+}
+
+[data-theme="dark"]{
+    --mainTextColor:#fff;
+    --secondaryTextColor:#adb0b1;
+    --mainLinkColor:rgb(30, 190,214);
+    --mainBorderColor:#2b3031;
+    --mainBgColor:#131415;
+}
+*{
+    font-family: 'Readex Pro';
+    line-height: 1.2rem;
+    box-sizing: border-box;
+    color: var(--mainTextColor);
+}
+body{
+    background-color: var(--mainBgColor);
+}
+
+#theme-switcher{
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.theme{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    transition: 0.3s;
+    border: 1px solid;
+}
+
+.theme:hover{
+    height: 33px;
+    width: 33px;
+}
+
+#theme-dark{
+    background-color: #000;
+}
+
+#theme-light{
+    background-color: #fff;
+}
+
+p, span, li{
+    color: var(--secondaryTextColor);
+    font-size: 0.9rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--mainLinkColor);
+    font-weight: 500;
+}
+
+li{
+    line-height: 1.9rem;
+}
+
+#container--main{
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.section--page{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#wrapper--hero{
+    display: flex;
+    align-items: center;
+    gap: 4em;
+}
+
+#bio, a{
+    font-weight: 300;
+}
+
+#user-name{
+    font-size: 48px;
+    line-height: 1em;
+}
+
+#profile-pic{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#email{
+    color: var(--mainTextColor);
+}
+
+#social--list{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1em;
+    flex-wrap: wrap;
+}
+
+#social--list a{
+    font-weight: 300;
+    color: var(--secondaryTextColor);
+    font-size: 0.9em;
+    transition: 0.3s;
+}
+
+#social--list a:hover{
+    font-weight: 100;
+    color: var(--mainLinkColor);
+    font-size: 0.9em;
+}
+
+#qualification--page{
+    list-style: none;
+}
+
+.card--techstack{
+    border: 1px solid var(--mainBorderColor);
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    align-items: center;
+}
+
+.card--work-history{
+    border-left: 1px solid var(--mainBorderColor);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-top: 1em;
+}
+
+.line-break{
+    background-color: var(--mainBorderColor);
+    height: 1px;
+}
+
+.card--project{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid var(--mainBorderColor);
+}
+
+.card--project a{
+    color: var(--mainTextColor);
+    transition: 0.3s;
+}
+
+.card--project a:hover{
+    color: rgba(30, 190, 214);
+}
+
+@media (max-width:600px) {
+    .section--page{
+        padding-top: 1em;
+        padding-bottom: 1em;
+        margin-top: 3em;
+    }
+    
+    #wrapper--hero{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+
+    #profile-pic{
+        width: 200px;
+        height: 200px;
+    }
+
+    #wrapper--hero{
+        flex-direction: column;
+    }
+
+    .card--work-history{
+        border-left: none;
+        padding-left: 0;
+    }
+}
+</style>
+<body>
+    <div id="container--main">
+        <section class="section--page" id="wrapper--hero">
+            <img src="./images/profilepic.jpg" id="profile-pic">
+            <div>
+                <h1 id="user_name">Narawin</h1>
+                <p id="bio">
+                    Frontend Developer |
+                    <a href="">MNC | </a>
+                    <a href="">Instructor | </a>
+                    <a href="">Photographer | Developer | </a>
+
+                </p>
+                <p id="email">narawin123@gamil.com</p>
+            </div>
+        </section>
+
+    <section class="section--page">
+        <div id="social--list">
+            <a href="" target="_blank">Youtube</a>
+            <a href="" target="_blank">Twitter</a>
+            <a href="" target="_blank">Linkedin</a>
+            <a href="" target="_blank">Github</a>
+            <a href="" target="_blank">Download Resume</a>
+        </div>
+    </section>
+
+    <section class="section--page">
+        <h2>Skills & Qualifications</h2>
+        <ul id="qualification--page">
+            <li>🗹 5Years exprience in Fullstack Development</li>
+            <li>🗹 Online Instructor</li>
+            <li>🗹 Technical coding</li>
+            <li>🗹 Product Photography</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Tech Stack Skills</h2>
+
+        <div id="wrapper--techstack__items">
+            <div class="card--techstack"><span>Python, JavaScript, NodeJS</span></div>
+            <div class="card--techstack"><span>Django, Express, Flask, FastAPI</span></div>
+            <div class="card--techstack"><span>React, Next JS</span></div>
+            <div class="card--techstack"><span>Postgres, MongoDB, MySQL</span></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Work History</h2>
+
+        <div class="card--work-history">
+            <strong>🚧 DEVELOPER</strong>
+            <p>11/2024 - present</p>
+            <p><strong>[current Challenge]</strong> Working to improve developer adoption and exprience across all
+                Appwrites SDKs through educational content <a href="" target="_blank">Youtube channel</a>, <a href=""
+                    target="_blank">articles</a>, & <a href="">Community events</a></p>
+            <strong>[progress since 9/2024]</strong>
+            <ul>
+                <li>Videos +100 | views +800.8k</li>
+                <li>Live strems: 10</li>
+                <li>Articles: 90</li>
+                <li>Events attended: 14</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section--page">
+        <h2>Projects & Accomplishment</h2>
+
+        <div class="card--project">
+            <a href="project.html">
+                <span>🌟</span>Bulit a Laborotory management system for forensic lab
+            </a>
+        </div>
+
+        <div class="card--project">
+            <a href="project.html">
+                <span>🌟</span>Documentation website - lead team to re-build docs for agora.io
+            </a>
+        </div>
+
+        <div class="card--project">
+            <a href="project.html">
+                <span>🌟</span>Social network - open source project
+            </a>
+        </div>
+    </section>
+    </div>
+
+    <div id="theme-switcher">
+        <div class="theme" id="theme-light" data-theme="light"></div>
+        <div class="theme" id="theme-dark" data-theme="dark"></div>
+    </div>
+</body>
+<script>
+    const themes = document.getElementsByClassName("theme");
+
+Array.from(themes).forEach((theme) => {
+    theme.addEventListener("click", (e) => {
+        document
+            .querySelector("body")
+            .setAttribute("data-theme", e.target.dataset.theme);
+        localStorage.setItem("theme", e.target.dataset.theme);
+    });
+});
+
+function getThemeOnLoad() {
+    const theme = localStorage.getItem("theme");
+
+    if (theme) {
+        document.querySelector("body").setAttribute("data-theme", theme);
+    }
+}
+
+getThemeOnLoad();
+</script>
+
+</html>
